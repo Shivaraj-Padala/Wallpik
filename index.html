@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shivaraj Padala">
+    <meta name="description" content="Beautiful wallpapers & stock images for free. Download no copyright photos">
+    <meta name="keywords" content="free wallpapers, stock images, pictures, wallpik, shivaraj padala, copyright free images">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Wallpik</title>
+</head>
+<body>
+    <header>
+        <div id="network-status"></div>
+        <nav id="nav-bar">
+            <a href="./index.html" class="logo" id="logo">Wallpik</a>
+            <div class="nav-search-container" id="nav-search-container">
+                <form id="nav-search-form">
+                    <input type="text" required name="search" placeholder="Search for photos" id="nav-search-bar" class="nav-search-bar">
+                    <button type="submit" class="search-btn-nav"><i class='bx bx-search nav-search-ico'></i></button>
+                </form>
+            </div>
+            <div class="nav-menu" id="menu">
+                <ul>
+                    <li><a href="mailto:shivarajpadala@gmail.com" class="nav-link">Contact</a></li>
+                    <li><a href="#footer" class="nav-link">Follow</a></li>
+                </ul>
+                <i class='bx bx-x' id="closeMenu"></i>
+            </div>
+            <i class='bx bx-menu' id="openMenu"></i>
+        </nav>
+    </header>
+    <section class="search-main">
+        <h1 class="main-heading">Stock photos & wallpapers for free.</h1>
+        <div class="body-search-container">
+            <form id="main-search-form">
+                <input type="text" name="search" required placeholder="Search for photos, wallpapers" id="main-search" class="main-search">
+                <button type="submit" class="search-btn-main"><i class='bx bx-search main-search-ico'></i></button>
+            </form>
+        </div>
+    </section>
+    <section class="search-result" id="search-result">
+        <div class="flex-container" id="flex-container">
+        </div>
+        <div class="load-more-container">
+            <button class="btn-load-more" id="load-more">Load More</button>
+            <h3 class="error-txt" id="error-txt"></h3>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-data">
+                <h3 class="footer-headings">Contact</h3>
+                <a href="mailto:shivarajpadala@gmail.com" class="mail-link">shivarajpadala@gmail.com</a>
+            </div>
+            <div class="footer-data" id="footer">
+                <h3 class="footer-headings">Follow</h3>
+                <a href="https://github.com/Shivaraj-Padala" class="social-links"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/shivarajpadala" class="social-links"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://twitter.com/shivarajpadala" class="social-links"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/shivarajpadala/" class="social-links"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/shivarajpadala" class="social-links"><i class='bx bxl-facebook-square'></i></a>
+            </div>
+        </div>
+        <h4 class="dev-txt">Handcrafted with<img src="./assets/heart.gif" alt="heart-gif" class="heart-gif">by Shivaraj Padala</h4>
+    </footer>
+    <script src="./main.js"></script> 
+</body>
+</html>
