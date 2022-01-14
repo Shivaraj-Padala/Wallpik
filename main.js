@@ -21,6 +21,13 @@ closePopup.id = "close-popup"
 closePopup.className = "bx bx-x"
 let posY = 0, deviceWidth = window.innerWidth, pageCounter = 1, searchQuery = '', defaultPage = true
 
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
+
 window.addEventListener("online", ()=>{
     networkStatusBar.className = "status-online"
     networkStatusBar.innerText = "Back online"
@@ -224,3 +231,6 @@ function linkAction(){
 }
 
 navLink.forEach(n => n.addEventListener('click',linkAction))
+
+sr.reveal('.main-heading', {});
+sr.reveal('.body-search-container', {});
