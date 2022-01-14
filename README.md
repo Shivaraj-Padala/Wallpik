@@ -19,6 +19,9 @@ Wallpik is a single page application built with HTML, CSS, Vanilla JavaScript & 
 
 For more information about Pexels API refer to [documentation.](https://www.pexels.com/api/)<br /><br />
 
+## License
+[MIT License](LICENSE)<br /><br />
+
 ## Desktop Screenshots <br /><br />
 <img src ="./screenshots/Screenshot 1.png" width="500"><br /><br />
 <img src ="./screenshots/Screenshot 2.png" width="500"><br /><br />
