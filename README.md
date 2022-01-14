@@ -14,10 +14,4 @@ For more information refer to [Pexels API](https://www.pexels.com/api/) document
 
 ## Mobile Screenshots <br /><br />
 
-<img src ="./screenshots/Screenshot 7.png" width="300">
-<img src ="./screenshots/Screenshot 8.png" width="300">
-<img src ="./screenshots/Screenshot 9.png" width="300">
-<img src ="./screenshots/Screenshot 10.png" width="300">
-<img src ="./screenshots/Screenshot 11.png" width="300">
-<img src ="./screenshots/Screenshot 12.png" width="300">
-<img src ="./screenshots/Screenshot 13.png" width="300">
+<p><img src ="./screenshots/Screenshot 7.png" width="300"><img src ="./screenshots/Screenshot 8.png" width="300"><img src ="./screenshots/Screenshot 9.png" width="300"><img src ="./screenshots/Screenshot 10.png" width="300"><img src ="./screenshots/Screenshot 11.png" width="300"><img src ="./screenshots/Screenshot 12.png" width="300"><img src ="./screenshots/Screenshot 13.png" width="300"></p>
