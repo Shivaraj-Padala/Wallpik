@@ -29,7 +29,7 @@ const sr = ScrollReveal({
 });
 
 window.addEventListener("online", ()=>{
-    networkStatusBar.className = "status-online"
+    networkStatusBar.style.backgroundColor = "#2FB986"
     networkStatusBar.innerText = "Back online"
     errorTxt.className = "hide-nav-component"
     loadMoreBtn.className = "btn-load-more"
@@ -39,7 +39,7 @@ window.addEventListener("online", ()=>{
 })
 
 window.addEventListener("offline", ()=>{
-    networkStatusBar.className = "status-offline"
+    networkStatusBar.style.cssText = "width: 100%; height: 3rem; text-align: center; font-weight: 500; font-size: large; padding: .6rem; background-color: #ff3a2c; color: #ffffff;"
     networkStatusBar.innerText = "Network connection lost"
     networkStatusBar.style.display = "block"
     loadMoreBtn.className = "hide-nav-component"

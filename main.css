@@ -5,8 +5,6 @@
     --secondaryColor: #1B1C1F;
     --accentColor: #6e6e6e;
     --hoverColor: #e4e4e4;
-    --materialRed: #ff3a2c;
-    --materialGreen: #2FB986;
 }
 
 *{
@@ -34,28 +32,6 @@ header{
     width: 100%;
     position: fixed;
     z-index: 1;
-}
-
-.status-offline{
-    width: 100%;
-    height: 3rem;
-    background-color: var(--materialRed);
-    text-align: center;
-    font-weight: 500;
-    font-size: large;
-    padding: .6rem;
-    color: var(--primaryColor);
-}
-
-.status-online{
-    background-color: var(--materialGreen);
-    width: 100%;
-    height: 3rem;
-    text-align: center;
-    font-weight: 500;
-    font-size: large;
-    padding: .6rem;
-    color: var(--primaryColor);
 }
 
 nav{
@@ -409,7 +385,6 @@ nav{
         padding-top: 6rem;
         transition: .4s;
         background-color: var(--secondaryColor);
-        
     }
 
     .nav-link{
