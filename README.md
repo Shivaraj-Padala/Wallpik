@@ -10,7 +10,7 @@
 <img title="Stars" src="https://img.shields.io/github/stars/Shivaraj-Padala/Wallpik?style=social">
 </p>
 
-Wallpik is a single page application built with HTML, CSS, Vanilla JavaScript & Pexels API which lets you browse and download from millions of stock photos and wallpapers.<br /><br />
+Wallpik is a single page application built with HTML, CSS, Vanilla JavaScript & Pexels API which lets you browse and download millions of stock photos and wallpapers.<br /><br />
 
 ## 🚀 Getting Started
 - Download or clone the repo.
