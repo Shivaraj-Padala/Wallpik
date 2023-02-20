@@ -1,0 +1,273 @@
+.image-dialog {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--primaryColor);
+    z-index: 6;
+    display: grid;
+    place-items: center;
+
+    .close-btn {
+        position: absolute;
+        top: 4%;
+        right: 4%;
+        fill: var(--secondaryColor);
+        cursor: pointer;
+    }
+
+    .preview-container {
+        position: relative;
+
+        .preview-spinner {
+            fill: var(--secondaryColor);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            animation: preview-spinner-animate 1.5s infinite linear;
+        }
+
+        @keyframes preview-spinner-animate {
+            0% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        img {
+            max-width: 85vw;
+            max-height: 80vh;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .download-btn {
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--secondaryColor);
+            display: grid;
+            place-items: center;
+            border-radius: 3rem;
+            right: 1rem;
+            bottom: 1rem;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.search-section {
+    background-image: url('/assets/images/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    .notification-container {
+        position: fixed;
+        z-index: 5;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 40%;
+        padding: .8rem .5rem;
+        text-align: center;
+        border-radius: 2rem;
+        font-weight: 500;
+        color: var(--secondaryColor);
+        background-color: var(--glassMorphicColor);
+        border: 1px solid var(--glassMorphicColor);
+        backdrop-filter: blur(4px);
+        transition: .4s;
+    }
+
+    .search-container {
+        color: var(--secondaryColor);
+        font-weight: 600;
+        width: 50%;
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .search-wrapper {
+            position: relative;
+            overflow: hidden;
+
+            input[type='text'] {
+                width: 100%;
+                height: 3.4rem;
+                border-radius: 7px;
+                outline: none;
+                border: none;
+                text-indent: 1rem;
+                font-size: 18px;
+                font-weight: 500;
+                background-color: var(--glassMorphicColor);
+                color: var(--glassMorphicTextColor);
+                backdrop-filter: blur(4px);
+
+                &::placeholder {
+                    color: var(--glassMorphicTextColor);
+                }
+            }
+
+            .search-icon {
+                cursor: pointer;
+                position: absolute;
+                top: 55%;
+                transform: translateY(-50%);
+                right: .5rem;
+                fill: var(--glassMorphicTextColor);
+                padding: .5rem;
+            }
+        }
+    }
+
+    .floating-btn {
+        position: fixed;
+        right: 2rem;
+        bottom: 3rem;
+        background-color: var(--secondaryColor);
+        fill: var(--accentColor);
+        width: 50px;
+        height: 50px;
+        z-index: 5;
+        border-radius: 3rem;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+}
+
+.card-section {
+    background-color: var(--primaryColor);
+
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        row-gap: 2rem;
+        justify-content: space-evenly;
+        padding: 3rem 0rem;
+
+        .img-card {
+            width: 30%;
+            height: auto;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+
+            .card-preloader {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                display: grid;
+                place-items: center;
+                background-color: var(--cardPreloaderColor);
+                z-index: 4;
+
+                .card-preload-spinner {
+                    fill: var(--secondaryColor);
+                    animation: card-preload-animate 1.5s infinite linear;
+                }
+
+                @keyframes card-preload-animate {
+                    0% {
+                        rotate: 0deg;
+                    }
+
+                    100% {
+                        rotate: 360deg;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .download-icon {
+                position: absolute;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: var(--secondaryColor);
+                display: grid;
+                place-items: center;
+                border-radius: 3rem;
+                right: 1rem;
+                bottom: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                cursor: pointer;
+                fill: var(--primaryColor);
+                z-index: 3;
+            }
+        }
+    }
+
+    .load-more-btn {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--primaryColor);
+        cursor: pointer;
+        font-weight: 600;
+        width: max-content;
+        margin: auto;
+        padding: .8rem 1.5rem;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: var(--secondaryColor);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .search-section {
+
+        .notification-container {
+            min-width: 70%;
+        }
+
+        .search-container {
+            width: 85%;
+
+            .search-wrapper {
+
+                input[type='text'] {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .floating-btn {
+            bottom: 3.5rem;
+            right: 1rem;
+        }
+    }
+
+    .card-section {
+
+        .cards-wrapper {
+
+            .img-card {
+                width: 43%;
+
+                .download-icon {
+                    width: 2rem;
+                    height: 2rem;
+                    right: 1rem;
+                    bottom: 1rem;
+                }
+            }
+        }
+    }
+}
