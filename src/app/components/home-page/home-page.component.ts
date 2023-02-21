@@ -72,7 +72,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
 
   loadAudio() {
     this.errorSound = new Audio();
-    this.errorSound.src = '/assets/sounds/error.mp3';
+    this.errorSound.src = './assets/sounds/error.mp3';
     this.errorSound.load();
   }
 
