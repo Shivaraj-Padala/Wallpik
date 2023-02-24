@@ -15,7 +15,7 @@ export class TokenInterceptorService implements HttpInterceptor{
     const tokenizedRequest = req.clone(
       {
         setHeaders: {
-          Authorization : `Bearer ${environment.authorizationHeader}`
+          Authorization : environment.authorizationHeader
         }
       }
     );
