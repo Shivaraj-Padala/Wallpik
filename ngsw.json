@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1678289417366,
+  "timestamp": 1678380934580,
   "index": "/Wallpik/index.html",
   "assetGroups": [
     {
@@ -60,7 +60,7 @@
     "/Wallpik/favicon.ico": "f97d05ce7255e37e49947808a53f505fa3ab8fab",
     "/Wallpik/index.html": "bcfa346e8fbf7581c895db434240c7b98f7eb473",
     "/Wallpik/main.124aa57b54c59fa4.js": "81a7f533278a09dde16a482b5aa4971a5d340c0a",
-    "/Wallpik/manifest.webmanifest": "601e13993086ecbed3fd83d6db07a33c9b1615b6",
+    "/Wallpik/manifest.webmanifest": "60f2590524491b60ab1c6a7956f6af1a3ec9c438",
     "/Wallpik/polyfills.12e4ab864c24a481.js": "0614fb4bfb6e4da6efeaee7a1701ff38b623becc",
     "/Wallpik/runtime.25ed582d09bcdda3.js": "12eae70ead155330f91f1ab5bba2e82fcf66c076",
     "/Wallpik/styles.8265819199fb4f71.css": "d8e2a8cfd65f6691f6c666020e324c30cf37ae16"
