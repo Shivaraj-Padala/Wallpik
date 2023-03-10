@@ -8,28 +8,15 @@ import { Component, ElementRef, Inject, Renderer2, ViewChild } from '@angular/co
 })
 
 export class NavbarComponent {
-  navMenuOpen: boolean = false;
-  networkStatusMsg = 'Online';
 
+  navMenuOpen: boolean = false;
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
-  @ViewChild('networkIndicator') networkIndicator!: ElementRef;
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,
     private viewportScroller: ViewportScroller,
-  ) {
-    window.addEventListener('online', () => {
-      this.networkStatusMsg = 'Online';
-      setTimeout(() => {
-        this.renderer.setStyle(this.networkIndicator.nativeElement, 'display', 'none');
-      }, 2000);
-    })
-    window.addEventListener('offline', () => {
-      this.networkStatusMsg = 'Offline';
-      this.renderer.setStyle(this.networkIndicator.nativeElement, 'display', 'block');
-    })
-  }
+  ) {}
 
   scrollToElement(elementId: string) {
     this.viewportScroller.scrollToAnchor(elementId);

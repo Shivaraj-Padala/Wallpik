@@ -70,6 +70,16 @@ export class HomePageComponent implements AfterViewInit, OnInit {
     this.cardPreloaderHeight = `${this.imageCard.first.nativeElement.offsetHeight}px`;
   }
 
+  @HostListener('window:online', ['$event'])
+  onOnline(){
+    // alert('on')
+  }
+
+  @HostListener('window:offline', ['$event'])
+  onOffline(){
+    // alert('off')
+  }
+
   loadAudio() {
     this.errorSound = new Audio();
     this.errorSound.src = './assets/sounds/error.mp3';

@@ -37,7 +37,7 @@
             </a>
         </div>
     </div>
-    <div *ngIf="imagesList.length != 0" class="load-more-btn" (click)="loadMore()">Load More</div>
+    <button *ngIf="imagesList.length != 0" class="load-more-btn" (click)="loadMore()">Load More</button>
 </section>
 
 <!-- To do
@@ -45,4 +45,6 @@
     2. update theme and background color in manifest for pwa (updated but need to check)
     4. dynamic component to show image dialog
     5. http error handling by http interceptor with error codes || image fetcher service show alerts
+    6. remove network error notification from nav and place at home component add new design
+    7. change div buttons to buttons tag
  -->
