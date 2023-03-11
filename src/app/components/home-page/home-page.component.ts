@@ -14,6 +14,7 @@ import { environment } from 'src/environment/environment';
 export class HomePageComponent implements AfterViewInit, OnInit {
 
   @ViewChild('notification') notification!: ElementRef;
+  @ViewChild('bottomBar') bottomBar!: ElementRef;
   @ViewChildren('imageCard') imageCard!: QueryList<ElementRef>;
 
   searchForm!: FormGroup;
@@ -29,6 +30,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   previewImageId!: string;
   previewImageData!: any;
   previewLoaded: boolean = false;
+  deviceOnlineStatus!: string;
   cardPreloaderHeight!: string;
   imagesList: any = [];
   imagesLoadedList = new Map();
@@ -68,6 +70,17 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.cardPreloaderHeight = `${this.imageCard.first.nativeElement.offsetHeight}px`;
+  }
+
+  @HostListener('window:online', ['$event'])
+  onOnline(){
+    this.deviceOnlineStatus = 'Online';
+  }
+
+  @HostListener('window:offline', ['$event'])
+  onOffline(){
+    this.deviceOnlineStatus = 'Offline';
+    this.renderer.setStyle(this.bottomBar.nativeElement, 'display', 'grid');
   }
 
   loadAudio() {

@@ -23,7 +23,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            translate: -50% -50%;
+            transform: translate(-50% -50%);
             animation: preview-spinner-animate 1.5s infinite linear;
         }
 
@@ -220,16 +220,113 @@
         color: var(--primaryColor);
         cursor: pointer;
         font-weight: 600;
-        width: max-content;
+        display: block;
         margin: auto;
         padding: .8rem 1.5rem;
         border-radius: 10px;
+        border: none;
 
         &:hover {
             background-color: var(--secondaryColor);
         }
     }
 }
+
+.bottom-bar {
+    position: fixed;
+    left: 50%;
+    bottom: -15%;
+    transform: translate(-50%);
+    width: 50px;
+    height: 50px;
+    color: transparent;
+    border-radius: 50px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 6;
+    display: none;
+    place-items: center;
+}
+
+.bottom-bar-open {
+    animation: bottom-bar-open-animation 1 2s ease-in-out;
+    animation-fill-mode: forwards;
+    background-color: #CB3141;
+}
+
+@keyframes bottom-bar-open-animation {
+    0% {
+        bottom: -15%;
+    }
+
+    15% {
+        bottom: 5%;
+        width: 50px;
+    }
+
+    25% {
+        bottom: 5%;
+        width: 50px;
+    }
+
+    45% {
+        bottom: 5%;
+        width: 200px;
+        color: transparent;
+    }
+
+    50% {
+        bottom: 5%;
+        color: var(--secondaryColor);
+    }
+
+    100% {
+        bottom: 5%;
+        width: 200px;
+        color: var(--secondaryColor);
+    }
+}
+
+.bottom-bar-close {
+    animation: bottom-bar-close-animation 1 2s ease-in-out;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    background-color: #2ECC70;
+}
+
+@keyframes bottom-bar-close-animation {
+    0% {
+        bottom: -15%;
+    }
+
+    15% {
+        bottom: 5%;
+        width: 50px;
+    }
+
+    25% {
+        bottom: 5%;
+        width: 50px;
+    }
+
+    45% {
+        bottom: 5%;
+        width: 200px;
+        color: transparent;
+    }
+
+    50% {
+        bottom: 5%;
+        color: var(--secondaryColor);
+    }
+
+    100% {
+        bottom: 5%;
+        width: 200px;
+        color: var(--secondaryColor);
+    }
+}
+
 
 @media screen and (max-width: 767px) {
     .search-section {
