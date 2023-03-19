@@ -49,13 +49,18 @@ export class HomePageComponent implements AfterViewInit, OnInit {
     private imageFetcher: ImageFetcherService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
   ) {
     if (window.innerWidth < 768) {
       this.searchPlaceHolder = 'Search for wallpapers';
     }
     this.loadAudio();
     this.subscribeQueryParams();
+
+    this.imageFetcher.errorMessageHandler.subscribe(errorMsg => {
+      this.errorMsg = errorMsg;
+      this.showNotification();
+    })
   }
 
   ngOnInit(): void {
