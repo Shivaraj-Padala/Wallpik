@@ -80,12 +80,16 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   @HostListener('window:online', ['$event'])
   onOnline(){
     this.deviceOnlineStatus = 'Online';
+    navigator.vibrate([200]);
   }
 
   @HostListener('window:offline', ['$event'])
   onOffline(){
     this.deviceOnlineStatus = 'Offline';
     this.renderer.setStyle(this.bottomBar.nativeElement, 'display', 'grid');
+    setTimeout(() =>{
+      navigator.vibrate([200]);
+    }, 1000)
   }
 
   loadAudio() {
