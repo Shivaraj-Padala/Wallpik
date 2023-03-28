@@ -7,6 +7,23 @@
     display: grid;
     place-items: center;
 
+    .preview-spinner {
+        fill: var(--secondaryColor);
+        position: absolute;
+        z-index: 7;
+        animation: preview-spinner-animate 1.5s infinite linear;
+    }
+
+    @keyframes preview-spinner-animate {
+        0% {
+            rotate: 0deg;
+        }
+
+        100% {
+            rotate: 360deg;
+        }
+    }
+
     .close-btn {
         position: absolute;
         top: 4%;
@@ -17,25 +34,6 @@
 
     .preview-container {
         position: relative;
-
-        .preview-spinner {
-            fill: var(--secondaryColor);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50% -50%);
-            animation: preview-spinner-animate 1.5s infinite linear;
-        }
-
-        @keyframes preview-spinner-animate {
-            0% {
-                rotate: 0deg;
-            }
-
-            100% {
-                rotate: 360deg;
-            }
-        }
 
         img {
             max-width: 85vw;
