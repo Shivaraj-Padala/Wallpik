@@ -1,9 +1,9 @@
 <div class="image-dialog" *ngIf="imageDialogOpened">
+    <svg class="preview-spinner" *ngIf="!previewLoaded" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M2 11h5v2H2zm15 0h5v2h-5zm-6 6h2v5h-2zm0-15h2v5h-2zM4.222 5.636l1.414-1.414 3.536 3.536-1.414 1.414zm15.556 12.728-1.414 1.414-3.536-3.536 1.414-1.414zm-12.02-3.536 1.414 1.414-3.536 3.536-1.414-1.414zm7.07-7.071 3.536-3.535 1.414 1.415-3.536 3.535z"></path></svg>
     <div class="close-btn" [routerLink]="'/'" [queryParams]="{}">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
     </div>
     <div class="preview-container">
-        <svg class="preview-spinner"  *ngIf="!previewLoaded" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M2 11h5v2H2zm15 0h5v2h-5zm-6 6h2v5h-2zm0-15h2v5h-2zM4.222 5.636l1.414-1.414 3.536 3.536-1.414 1.414zm15.556 12.728-1.414 1.414-3.536-3.536 1.414-1.414zm-12.02-3.536 1.414 1.414-3.536 3.536-1.414-1.414zm7.07-7.071 3.536-3.535 1.414 1.415-3.536 3.535z"></path></svg>
         <img [src]="previewImage" (load)="previewLoaded = true">
         <a [href]="downloadUrl+'/'+previewImageId+'/download/'" class="download-btn" *ngIf="previewLoaded">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m18.707 12.707-1.414-1.414L13 15.586V6h-2v9.586l-4.293-4.293-1.414 1.414L12 19.414z"></path></svg>
@@ -43,8 +43,3 @@
 </section>
 
 <div class="bottom-bar" [ngClass]="deviceOnlineStatus == 'Online' ? 'bottom-bar-close' : 'bottom-bar-open'" #bottomBar>{{deviceOnlineStatus}}</div>
-
-<!-- To do
-    4. dynamic component to show image dialog
-    8. add viberations for alerts for mobile
- -->
