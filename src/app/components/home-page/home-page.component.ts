@@ -13,8 +13,9 @@ import { environment } from 'src/environment/environment';
 
 export class HomePageComponent implements AfterViewInit, OnInit {
 
-  @ViewChild('notification') notification!: ElementRef;
-  @ViewChild('bottomBar') bottomBar!: ElementRef;
+  @ViewChild('notification') notification!: ElementRef<HTMLElement>;
+  @ViewChild('bottomBar') bottomBar!: ElementRef<HTMLElement>;
+  @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
   @ViewChildren('imageCard') imageCard!: QueryList<ElementRef>;
 
   searchForm!: FormGroup;
@@ -200,6 +201,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   }
 
   searchImages() {
+    this.searchInput.nativeElement.blur();
     if (this.validateSearch()) {
       this.pageCounter = 1;
       this.searchOptions.params.query = this.searchTerm;
