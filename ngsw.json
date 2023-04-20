@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1680220237630,
+  "timestamp": 1681957192288,
   "index": "/Wallpik/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/Wallpik/favicon.ico",
         "/Wallpik/index.html",
-        "/Wallpik/main.dceade226875dacf.js",
+        "/Wallpik/main.cb1ffe91977fcf41.js",
         "/Wallpik/manifest.webmanifest",
         "/Wallpik/polyfills.12e4ab864c24a481.js",
         "/Wallpik/runtime.25ed582d09bcdda3.js",
@@ -56,10 +56,10 @@
     "/Wallpik/assets/icons/icon-96x96.png": "176fd6a744c26c517deaa6ec89595ca3923831c9",
     "/Wallpik/assets/images/background.webp": "c4b7e5f8fc9fafec47e954c3397fc4a36740b525",
     "/Wallpik/assets/images/heart.gif": "ee6dbe085694ee1821227dd0fb40e1a2df7f7e3c",
-    "/Wallpik/assets/sounds/error.mp3": "ae41a36608c5c57ad42b4a5f4642377c4af24f51",
+    "/Wallpik/assets/sounds/error.mp3": "ea065628e5b188b633b48ace5d99765ef2249c40",
     "/Wallpik/favicon.ico": "f97d05ce7255e37e49947808a53f505fa3ab8fab",
-    "/Wallpik/index.html": "7ad9fa97f0bb0f97ad0962451598f3587814f40f",
-    "/Wallpik/main.dceade226875dacf.js": "acaf55b588f91b4fb23c2cafddb797ee9a818927",
+    "/Wallpik/index.html": "d21aedf602c92e084ecebf2029ca7c4aa0c48074",
+    "/Wallpik/main.cb1ffe91977fcf41.js": "fbd9bc1dd97243f85d66007c966ae5d265775197",
     "/Wallpik/manifest.webmanifest": "60f2590524491b60ab1c6a7956f6af1a3ec9c438",
     "/Wallpik/polyfills.12e4ab864c24a481.js": "0614fb4bfb6e4da6efeaee7a1701ff38b623becc",
     "/Wallpik/runtime.25ed582d09bcdda3.js": "12eae70ead155330f91f1ab5bba2e82fcf66c076",
