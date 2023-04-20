@@ -25,7 +25,7 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   pageCounter: number = 1;
   searchTerm!: string;
   errorMsg!: string;
-  errorSound!: any;
+  notificationSound!: any;
   imageDialogOpened: boolean = false;
   previewImage!: string;
   previewImageId!: string;
@@ -81,22 +81,22 @@ export class HomePageComponent implements AfterViewInit, OnInit {
   @HostListener('window:online', ['$event'])
   onOnline(){
     this.deviceOnlineStatus = 'Online';
-    navigator.vibrate([200]);
+    this.playNotificationAlert();
   }
 
   @HostListener('window:offline', ['$event'])
   onOffline(){
     this.deviceOnlineStatus = 'Offline';
     this.renderer.setStyle(this.bottomBar.nativeElement, 'display', 'grid');
-    setTimeout(() =>{
-      navigator.vibrate([200]);
+    setTimeout(() => {
+      this.playNotificationAlert();
     }, 1000)
   }
 
   loadAudio() {
-    this.errorSound = new Audio();
-    this.errorSound.src = './assets/sounds/error.mp3';
-    this.errorSound.load();
+    this.notificationSound = new Audio();
+    this.notificationSound.src = './assets/sounds/error.mp3';
+    this.notificationSound.load();
   }
 
   subscribeQueryParams() {
@@ -212,10 +212,15 @@ export class HomePageComponent implements AfterViewInit, OnInit {
 
   showNotification() {
     this.renderer.setStyle(this.notification.nativeElement, 'top', '13%');
-    this.errorSound.play();
+    this.playNotificationAlert();
     setTimeout(() => {
       this.renderer.setStyle(this.notification.nativeElement, 'top', '-50%');
     }, 2000)
+  }
+
+  playNotificationAlert(){
+    this.notificationSound.play();
+    navigator.vibrate([200]);
   }
 
   loadMore() {
